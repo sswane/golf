@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:golf/app_state.dart';
 import 'package:golf/course/side.dart';
+import 'package:provider/provider.dart';
 
 class Par extends StatefulWidget {
   const Par({super.key, required this.side});
@@ -24,6 +26,7 @@ class _Par extends State<Par> {
 
   @override
   Widget build(BuildContext context) {
+    var appState = context.watch<MyAppState>();
     var theme = Theme.of(context);
     var side = widget.side;
 
@@ -52,6 +55,8 @@ class _Par extends State<Par> {
                                         borderSide: BorderSide(
                                             width: 3,
                                             color: theme.primaryColor))),
+                                onChanged: (value) => appState.setParForHole(
+                                    (index), int.parse(value)),
                               )))),
                 )),
           ],

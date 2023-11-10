@@ -21,8 +21,6 @@ class _CourseInfo extends State<CourseInfo> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-
     return Scaffold(
       appBar: AppBar(title: const Text('Add New Course Info')),
       body: ListView(

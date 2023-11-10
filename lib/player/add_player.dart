@@ -109,7 +109,6 @@ class _AddPlayerState extends State<AddPlayer> {
                       nameTxtController.clear();
                       handicapTxtController.clear();
                       nameFieldFocusNode.requestFocus();
-                      handicapFieldFocusNode.requestFocus();
                     }
                   },
                   child: const Text('Submit'),
